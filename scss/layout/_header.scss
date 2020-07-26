@@ -1,0 +1,16 @@
+.header {
+    background-color: $color-headfoot;
+
+    &__content {
+        display: flex;
+
+        &--logo {
+            color: $color-logo;
+            font-size: xx-large;
+        }
+
+        .dot {
+            color: $color-red;
+        }
+    }
+}

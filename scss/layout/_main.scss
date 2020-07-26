@@ -1,0 +1,29 @@
+.content {
+  .progres {
+    background-color: $color-grey;
+    width: 100%;
+
+    #bar {
+      width: 1%;
+      height: 18px;
+      background-color: green;
+    }
+  }
+}
+
+.aside {
+  &__card--event {
+    background-color: $color-blue;
+  }
+
+  &__card--favorite {
+    background-color: $color-green;
+  }
+
+  &__card--message {
+    background-color: $color-red;
+  }
+}
+
+@media screen and (min-width: 768px) {
+}
