@@ -1,27 +1,39 @@
-.content {
-  .progres {
-    background-color: $color-grey;
-    width: 100%;
+@import "../components/donut";
 
-    #bar {
-      width: 1%;
-      height: 18px;
-      background-color: green;
+.main {
+
+    background-color: $color-main;
+    
+  .content {
+
+    &__card {
+        
+        #progress {
+            width: 50%;
+            background-color: #ddd;
+            border-radius: 50px;
+            
+            #bar {
+                height: 20px;
+                background: $color-linear-gradient;
+                width: 0%;
+            }
+        }
     }
   }
-}
 
-.aside {
-  &__card--event {
-    background-color: $color-blue;
-  }
+  .aside {
+    &__card--event {
+      background-color: $color-blue;
+    }
 
-  &__card--favorite {
-    background-color: $color-green;
-  }
+    &__card--favorite {
+      background-color: $color-green;
+    }
 
-  &__card--message {
-    background-color: $color-red;
+    &__card--message {
+      background-color: $color-red;
+    }
   }
 }
 

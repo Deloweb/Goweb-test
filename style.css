@@ -7161,9 +7161,6 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-body {
-  margin: 0; }
-
 .header {
   background-color: #f5f6fa; }
   .header__content {
@@ -7174,22 +7171,57 @@ body {
     .header__content .dot {
       color: #ff445f; }
 
-.content .progres {
-  background-color: #e8f0f2;
-  width: 100%; }
-  .content .progres #bar {
-    width: 1%;
-    height: 18px;
-    background-color: green; }
+.main {
+  background-color: white; }
+  .main .content__card #progress {
+    width: 50%;
+    background-color: #ddd;
+    border-radius: 50px; }
+    .main .content__card #progress #bar {
+      height: 20px;
+      background: linear-gradient(100deg, #ff475f, #fde163);
+      width: 0%; }
+  .main .aside__card--event {
+    background-color: #39bef6; }
+  .main .aside__card--favorite {
+    background-color: #45e492; }
+  .main .aside__card--message {
+    background-color: #ff445f; }
 
-.aside__card--event {
-  background-color: #39bef6; }
+.slider {
+  overflow: hidden;
+  max-width: 463px; }
+  .slider__figure {
+    position: relative;
+    width: 400%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 15s slidy infinite; }
+    .slider__figure:hover {
+      animation-play-state: paused; }
+    .slider__figure--img {
+      width: 25%;
+      float: left; }
 
-.aside__card--favorite {
-  background-color: #45e492; }
-
-.aside__card--message {
-  background-color: #ff445f; }
+@keyframes slidy {
+  0% {
+    left: 0%; }
+  25% {
+    left: 0%; }
+  30% {
+    left: -100%; }
+  55% {
+    left: -100%; }
+  60% {
+    left: -200%; }
+  85% {
+    left: -200%; }
+  90% {
+    left: -300%; }
+  100% {
+    left: -300%; } }
 
 .footer {
   background-color: #f5f6fa; }
