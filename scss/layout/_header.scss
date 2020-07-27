@@ -12,5 +12,14 @@
         .dot {
             color: $color-red;
         }
+
+        &__navbar {
+
+            .menu {
+                color: inherit;
+            }
+        }
     }
+
+
 }

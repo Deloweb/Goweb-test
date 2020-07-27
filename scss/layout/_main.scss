@@ -1,41 +1,38 @@
 @import "../components/donut";
 
 .main {
+  background-color: $color-main;
 
-    background-color: $color-main;
-    
   .content {
-
     &__card {
-        
-        #progress {
-            width: 50%;
-            background-color: #ddd;
-            border-radius: 50px;
-            
-            #bar {
-                height: 20px;
-                background: $color-linear-gradient;
-                width: 0%;
-            }
+
+      #progress {
+        width: 50%;
+        background-color: #ddd;
+        border-radius: 50px;
+        #bar {
+          height: 20px;
+          background: $color-linear-gradient;
+          width: 0%;
         }
-    }
-  }
-
-  .aside {
-    &__card--event {
-      background-color: $color-blue;
-    }
-
-    &__card--favorite {
-      background-color: $color-green;
-    }
-
-    &__card--message {
-      background-color: $color-red;
+      }
     }
   }
 }
 
 @media screen and (min-width: 768px) {
+}
+
+.aside {
+  &__card--event {
+    background-color: $color-blue;
+  }
+
+  &__card--favorite {
+    background-color: $color-green;
+  }
+
+  &__card--message {
+    background-color: $color-red;
+  }
 }

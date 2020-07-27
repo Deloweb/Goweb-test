@@ -7170,6 +7170,83 @@ a.text-dark:hover, a.text-dark:focus {
       font-size: xx-large; }
     .header__content .dot {
       color: #ff445f; }
+    .header__content__navbar .menu {
+      color: inherit; }
+
+.circular {
+  height: 100px;
+  width: 100px;
+  position: relative; }
+
+.circular .inner, .circular .outer, .circular .circle {
+  position: absolute;
+  z-index: 6;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2); }
+
+.circular .inner {
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+
+.circular .circle {
+  z-index: 1;
+  box-shadow: none; }
+
+.circular .numb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; }
+
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #e8f0f2;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px); }
+
+.progressDonutR, .progressDonutL {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px); }
+
+.circle .bar .progressDonutR {
+  background: linear-gradient(#fde163, #ff475f); }
+
+.circle .bar .progressDonutL {
+  background: linear-gradient(#fde163, #ff475f); }
+
+.progressDonutL {
+  z-index: 1;
+  animation: left 0.3s linear both; }
+
+@keyframes left {
+  100% {
+    transform: rotate(180deg); } }
+
+.circle .right {
+  z-index: 3;
+  transform: rotate(180deg); }
+
+.progressDonutR {
+  animation: right 0.3s linear both;
+  animation-delay: 0.3s; }
+
+@keyframes right {
+  100% {
+    transform: rotate(36deg); } }
 
 .main {
   background-color: white; }
@@ -7179,14 +7256,17 @@ a.text-dark:hover, a.text-dark:focus {
     border-radius: 50px; }
     .main .content__card #progress #bar {
       height: 20px;
-      background: linear-gradient(100deg, #ff475f, #fde163);
+      background: linear-gradient(90deg, #ff475f, #fde163);
       width: 0%; }
-  .main .aside__card--event {
-    background-color: #39bef6; }
-  .main .aside__card--favorite {
-    background-color: #45e492; }
-  .main .aside__card--message {
-    background-color: #ff445f; }
+
+.aside__card--event {
+  background-color: #39bef6; }
+
+.aside__card--favorite {
+  background-color: #45e492; }
+
+.aside__card--message {
+  background-color: #ff445f; }
 
 .slider {
   overflow: hidden;

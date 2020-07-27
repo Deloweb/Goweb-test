@@ -7,4 +7,6 @@ $color-logo: rgb(68, 61, 59);
 $color-grey: rgb(232, 240, 242);
 $color-yellow: rgb(253, 225, 99);
 $color-redish: rgb(255, 71, 95);
-$color-linear-gradient: linear-gradient(100deg, $color-redish, $color-yellow);
+$color-linear-gradient: linear-gradient(90deg, $color-redish, $color-yellow);
+$color-linear-gradient--right: linear-gradient($color-yellow, $color-redish);
+$color-linear-gradient--left: linear-gradient($color-yellow, $color-redish);
