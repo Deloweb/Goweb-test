@@ -4,6 +4,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Raleway:wght@500;900&family=Telex&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7165,108 +7166,142 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #f5f6fa; }
   .header__content {
     display: flex; }
+    .header__content__card--main {
+      display: flex;
+      flex-direction: row; }
     .header__content--logo {
       color: #443d3b;
-      font-size: xx-large; }
+      font-size: xx-large;
+      font-family: "Telex", sans-serif; }
     .header__content .dot {
       color: #ff445f; }
-    .header__content__navbar .menu {
-      color: inherit; }
+  .header .menu {
+    flex-direction: column;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 45%;
+    height: 100%;
+    z-index: 11; }
+    .header .menu .closeMenu {
+      text-align: right; }
+    .header .menu .grey {
+      color: grey; }
+    .header .menu .nav {
+      height: 100%;
+      margin-top: 30%;
+      margin-left: 10%;
+      font-family: "Bitter", serif;
+      font-style: italic; }
+      .header .menu .nav ul {
+        list-style: none; }
+      .header .menu .nav__links {
+        font-size: x-large; }
+        .header .menu .nav__links--sublinks {
+          font-size: medium; }
 
-.circular {
-  height: 100px;
-  width: 100px;
-  position: relative; }
+@media (min-width: 992px) {
+  .header .menu .nav {
+    margin-top: 20%; } }
 
-.circular .inner, .circular .outer, .circular .circle {
-  position: absolute;
-  z-index: 6;
-  height: 100%;
-  width: 100%;
-  border-radius: 100%;
-  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2); }
-
-.circular .inner {
-  top: 50%;
-  left: 50%;
-  height: 80px;
-  width: 80px;
-  margin: -40px 0 0 -40px;
-  background-color: white;
-  border-radius: 100%;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
-
-.circular .circle {
-  z-index: 1;
-  box-shadow: none; }
-
-.circular .numb {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10; }
-
-.circular .bar {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: #e8f0f2;
-  -webkit-border-radius: 100%;
-  clip: rect(0px, 100px, 100px, 50px); }
-
-.progressDonutR, .progressDonutL {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  -webkit-border-radius: 100%;
-  clip: rect(0px, 50px, 100px, 0px); }
-
-.circle .bar .progressDonutR {
-  background: linear-gradient(#fde163, #ff475f); }
-
-.circle .bar .progressDonutL {
-  background: linear-gradient(#fde163, #ff475f); }
-
-.progressDonutL {
-  z-index: 1;
-  animation: left 0.3s linear both; }
-
-@keyframes left {
-  100% {
-    transform: rotate(180deg); } }
-
-.circle .right {
-  z-index: 3;
-  transform: rotate(180deg); }
-
-.progressDonutR {
-  animation: right 0.3s linear both;
-  animation-delay: 0.3s; }
-
-@keyframes right {
-  100% {
-    transform: rotate(36deg); } }
+.donut {
+  padding: 30px;
+  margin: 30px 5px; }
+  .donut .graph-cont {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .donut .graph-cont .svg-cont {
+      display: block;
+      margin: 0 auto; }
+    .donut .graph-cont .progress {
+      fill: none;
+      stroke: url(#lgrad);
+      stroke-width: 18;
+      stroke-linecap: round;
+      transform-origin: center;
+      transform: rotate(-90deg); }
+    .donut .graph-cont text {
+      fill: black;
+      font-size: 44px;
+      font-family: "Bitter", serif;
+      font-weight: bold; }
 
 .main {
   background-color: white; }
-  .main .content__card #progress {
-    width: 50%;
-    background-color: #ddd;
-    border-radius: 50px; }
-    .main .content__card #progress #bar {
-      height: 20px;
-      background: linear-gradient(90deg, #ff475f, #fde163);
-      width: 0%; }
+  .main .content__card {
+    margin: 30px 5px; }
+    .main .content__card--main {
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; }
+    .main .content__card #progress {
+      width: 80%;
+      background-color: #ddd;
+      border-radius: 50px; }
+      .main .content__card #progress #bar {
+        height: 20px;
+        background: linear-gradient(90deg, #ff475f, #fde163);
+        width: 0%; }
+  .main .percentage {
+    font-family: "Bitter", serif; }
 
-.aside__card--event {
-  background-color: #39bef6; }
+.aside {
+  overflow: scroll; }
+  .aside__card--event {
+    background-color: #39bef6;
+    min-width: 300px;
+    max-width: 300px; }
+  .aside__card--favorite {
+    background-color: #45e492;
+    min-width: 300px;
+    max-width: 300px; }
+  .aside__card--message {
+    background-color: #ff445f;
+    min-width: 300px;
+    max-width: 300px; }
 
-.aside__card--favorite {
-  background-color: #45e492; }
+@media screen and (min-width: 768px) {
+  .graphs {
+    display: flex; }
+    .graphs .content__card {
+      margin-right: 5px; }
+    .graphs .donut {
+      margin-left: 5px; } }
 
-.aside__card--message {
-  background-color: #ff445f; }
+@media (min-width: 900px) {
+  .aside {
+    justify-content: center; } }
+
+@media (min-width: 992px) {
+  .graphs {
+    flex-direction: column; }
+    .graphs .content__card {
+      margin: 0;
+      max-height: 200px; }
+    .graphs .donut {
+      margin: 10px 0 0 0; }
+  .mainContent {
+    display: flex; } }
+
+@media (min-width: 1200px) {
+  .global {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%; }
+    .global .aside {
+      flex-direction: column;
+      overflow: unset;
+      justify-content: start;
+      padding-top: 20px; }
+    .global .mainContent .graphs {
+      margin-right: 10px; }
+    .global .mainContent .slider {
+      margin-left: 10px; } }
 
 .slider {
   overflow: hidden;
@@ -7307,4 +7342,8 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #f5f6fa; }
   .footer--content {
     color: #ff445f;
-    font-size: xx-large; }
+    font-size: xx-large;
+    font-family: 'Telex', sans-serif; }
+
+body {
+  font-family: 'Raleway', sans-serif; }

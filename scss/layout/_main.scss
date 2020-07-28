@@ -5,9 +5,17 @@
 
   .content {
     &__card {
+      margin: 30px 5px;
+
+      &--main {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
 
       #progress {
-        width: 50%;
+        width: 80%;
         background-color: #ddd;
         border-radius: 50px;
         #bar {
@@ -18,21 +26,95 @@
       }
     }
   }
-}
 
-@media screen and (min-width: 768px) {
+  .percentage {
+    font-family: "Bitter", serif;
+  }
 }
 
 .aside {
+  overflow: scroll;
+
   &__card--event {
     background-color: $color-blue;
+    min-width: 300px;
+    max-width: 300px;
   }
 
   &__card--favorite {
     background-color: $color-green;
+    min-width: 300px;
+    max-width: 300px;
   }
 
   &__card--message {
     background-color: $color-red;
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .graphs {
+    display: flex;
+
+    .content__card {
+      margin-right: 5px;
+    }
+
+    .donut {
+      margin-left: 5px;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .aside {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .graphs {
+    flex-direction: column;
+
+    .content__card {
+      margin: 0;
+      max-height: 200px;
+    }
+
+    .donut {
+      margin: 10px 0 0 0;
+    }
+  }
+
+  .mainContent {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .global {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+
+    .aside {
+      flex-direction: column;
+      overflow: unset;
+      justify-content: start;
+      padding-top: 20px
+    }
+
+    .mainContent{
+
+      .graphs{
+        margin-right: 10px;
+      }
+
+      .slider {
+        margin-left: 10px
+      }
+    }
   }
 }

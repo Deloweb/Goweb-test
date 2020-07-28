@@ -1,25 +1,72 @@
 .header {
-    background-color: $color-headfoot;
+  background-color: $color-headfoot;
 
-    &__content {
-        display: flex;
+  &__content {
+    display: flex;
 
-        &--logo {
-            color: $color-logo;
-            font-size: xx-large;
-        }
-
-        .dot {
-            color: $color-red;
-        }
-
-        &__navbar {
-
-            .menu {
-                color: inherit;
-            }
-        }
+    &__card--main {
+      display: flex;
+      flex-direction: row;
     }
 
+    &--logo {
+      color: $color-logo;
+      font-size: xx-large;
+      font-family: "Telex", sans-serif;
+    }
 
+    .dot {
+      color: $color-red;
+    }
+  }
+
+  .menu {
+    flex-direction: column;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba($color: black, $alpha: 0.9);
+    width: 45%;
+    height: 100%;
+    z-index: 11;
+
+    .closeMenu {
+      text-align: right;
+    }
+
+    .grey {
+      color: grey;
+    }
+
+    .nav {
+      height: 100%;
+      margin-top: 30%;
+      margin-left: 10%;
+      font-family: "Bitter", serif;
+      font-style: italic;
+
+      ul {
+        list-style: none;
+      }
+
+      &__links {
+        font-size: x-large;
+
+        &--sublinks {
+          font-size: medium;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    .menu {
+      .nav {
+        margin-top: 20%;
+      }
+    }
+  }
 }
