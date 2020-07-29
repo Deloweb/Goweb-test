@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node-sass scss/main.scss style.css",
+    "dev": "node-sass style/scss/main.scss style/style.css",
     "prod": "node-sass scss/main.scss style.css && postcss style.css -o style.css -u autoprefixer && postcss style.css -o style.css -u cssnano"
   },
   "author": "",
