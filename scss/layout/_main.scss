@@ -1,37 +1,12 @@
 @import "../components/donut";
+@import "../components/progressBar";
+@import "../components/slider";
 
 .main {
   background-color: $color-main;
-
-  .content {
-    &__card {
-      margin: 30px 5px;
-
-      &--main {
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-      }
-
-      #progress {
-        width: 80%;
-        background-color: #ddd;
-        border-radius: 50px;
-        #bar {
-          height: 20px;
-          background: $color-linear-gradient;
-          width: 0%;
-        }
-      }
-    }
-  }
-
-  .percentage {
-    font-family: "Bitter", serif;
-  }
 }
 
+// Aside
 .aside {
   overflow: scroll;
 
@@ -54,27 +29,10 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+// Screen width properties
+@media (min-width: 768px) {
   .graphs {
     display: flex;
-    justify-content: center;
-
-    .content__card {
-      margin-right: 5px;
-
-      &--main {
-        margin-top: 50px;
-      }
-    }
-
-    .donut {
-      margin-left: 5px;
-    }
-  }
-}
-
-@media (min-width: 900px) {
-  .aside {
     justify-content: center;
   }
 }
@@ -82,19 +40,9 @@
 @media (min-width: 992px) {
   .graphs {
     flex-direction: column;
-
-    .content__card {
-      margin: 0;
-      max-height: 200px;
-
-      &--main {
-        margin-top: 0px;
-      }
-    }
-
-    .donut {
-      margin: 10px 0 0 0;
-    }
+  }
+  .aside {
+    justify-content: center;
   }
 
   .mainContent {
@@ -118,10 +66,6 @@
     .mainContent {
       .graphs {
         margin-right: 10px;
-      }
-
-      .slider {
-        margin-left: 10px;
       }
     }
   }

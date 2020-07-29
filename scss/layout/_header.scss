@@ -1,13 +1,10 @@
+@import './navigation';
+
 .header {
   background-color: $color-headfoot;
 
   &__content {
     display: flex;
-
-    &__card--main {
-      display: flex;
-      flex-direction: row;
-    }
 
     &--logo {
       color: $color-logo;
@@ -17,61 +14,6 @@
 
     .dot {
       color: $color-red;
-    }
-  }
-
-  .menu {
-    flex-direction: column;
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba($color: black, $alpha: 0.9);
-    width: 45%;
-    height: 100%;
-    z-index: 11;
-
-    .closeMenu {
-      text-align: right;
-    }
-
-    .grey {
-      color: grey;
-    }
-
-    .nav {
-      height: 100%;
-      margin-top: 30%;
-      margin-left: 10%;
-      font-family: "Bitter", serif;
-      font-style: italic;
-      
-      .menuLink {
-        text-decoration: none;
-      }
-
-
-      &__links {
-        font-size: x-large;
-        text-decoration: none;
-        color: white;
-
-        &--sublinks {
-          font-size: medium;
-          text-decoration: none;
-          color: white;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 992px) {
-  .header {
-    .menu {
-      .nav {
-        margin-top: 20%;
-      }
     }
   }
 }

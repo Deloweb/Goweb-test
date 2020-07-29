@@ -17,27 +17,24 @@
         </p>
 
         <!-- Navbar -->
-        <div class="header__content__navbar">
-          <div class="menuBtn" onclick="showMenu()">
-            <svg
-              width="1em"
-              height="1em"
-              viewBox="0 0 16 16"
-              class="bi bi-filter-right"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-              style="font-size: 40px;">
-              <path
-                fill-rule="evenodd"
-                d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z"/>
-            </svg>
-          </div>
+        <div class="menuBtn" id="menuBtn">
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-filter-right"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            style="font-size: 40px;">
+            <path
+              fill-rule="evenodd"
+              d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z"/>
+          </svg>
         </div>
       </div>
       <div class="menu" id="menu">
         <div class="closeMenu" id="closeMenu">
           <svg
-            onclick="closeMenu()"
             width="1em"
             height="1em"
             viewBox="0 0 16 16"
@@ -87,8 +84,8 @@
             <div class="graphs">
 
               <!-- Linear progress bar -->
-              <div class="content__card p-3 shadow-lg">
-                <h5 class="text-center progress-title p-2">
+              <div class="content__card p-3 shadow">
+                <h5 class="text-center p-2">
                   Une progress bar cute
                 </h5>
                 <div class="content__card--main">
@@ -119,8 +116,8 @@
               </div>
 
               <!-- Donut (circular progress bar) -->
-              <div class="pt-4 shadow-lg donut">
-                <h5 class="text-center progress-title p-2">
+              <div class="pt-4 shadow donut">
+                <h5 class="text-center p-2">
                   Un donut méga cool
                 </h5>
 
@@ -129,7 +126,6 @@
                     class="svg-cont m-2 mx-auto"
                     width="171px"
                     height="171px">
-                    <defs>
 
                       <!-- Circular progress bar gradient  -->
                       <linearGradient
@@ -143,9 +139,8 @@
                           style="stop-color: #ff475f; stop-opacity: 1;"/>
                         <stop
                           offset="100%"
-                          style="stop-color: #fedf5d; stop-opacity: 1;"/>
+                          style="stop-color: #fde163; stop-opacity: 1;"/>
                       </linearGradient>
-                    </defs>
                     <g>
                       <circle
                         class="progress"

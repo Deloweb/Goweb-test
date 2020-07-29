@@ -7162,53 +7162,51 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+.menu {
+  flex-direction: column;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 45%;
+  height: 100%;
+  z-index: 11; }
+  .menu .closeMenu {
+    text-align: right; }
+  .menu .grey {
+    color: grey; }
+  .menu .nav {
+    height: 100%;
+    margin-top: 30%;
+    margin-left: 10%;
+    font-family: "Bitter", serif;
+    font-style: italic; }
+    .menu .nav .menuLink {
+      text-decoration: none; }
+    .menu .nav__links {
+      font-size: x-large;
+      text-decoration: none;
+      color: white; }
+      .menu .nav__links--sublinks {
+        font-size: medium;
+        text-decoration: none;
+        color: white; }
+
+@media (min-width: 992px) {
+  .header .menu .nav {
+    margin-top: 20%; } }
+
 .header {
   background-color: #f5f6fa; }
   .header__content {
     display: flex; }
-    .header__content__card--main {
-      display: flex;
-      flex-direction: row; }
     .header__content--logo {
       color: #443d3b;
       font-size: xx-large;
       font-family: "Telex", sans-serif; }
     .header__content .dot {
       color: #ff445f; }
-  .header .menu {
-    flex-direction: column;
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    width: 45%;
-    height: 100%;
-    z-index: 11; }
-    .header .menu .closeMenu {
-      text-align: right; }
-    .header .menu .grey {
-      color: grey; }
-    .header .menu .nav {
-      height: 100%;
-      margin-top: 30%;
-      margin-left: 10%;
-      font-family: "Bitter", serif;
-      font-style: italic; }
-      .header .menu .nav .menuLink {
-        text-decoration: none; }
-      .header .menu .nav__links {
-        font-size: x-large;
-        text-decoration: none;
-        color: white; }
-        .header .menu .nav__links--sublinks {
-          font-size: medium;
-          text-decoration: none;
-          color: white; }
-
-@media (min-width: 992px) {
-  .header .menu .nav {
-    margin-top: 20%; } }
 
 .donut {
   padding: 15px;
@@ -7229,88 +7227,50 @@ a.text-dark:hover, a.text-dark:focus {
       transform-origin: center;
       transform: rotate(-90deg); }
     .donut .graph-cont text {
-      fill: black;
-      font-size: 44px;
+      font-size: 2.5rem;
       font-family: "Bitter", serif;
       font-weight: bold; }
 
-.main {
-  background-color: white; }
-  .main .content__card {
-    margin: 30px 5px; }
-    .main .content__card--main {
-      height: 100px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly; }
-    .main .content__card #progress {
-      width: 80%;
-      background-color: #ddd;
-      border-radius: 50px; }
-      .main .content__card #progress #bar {
-        height: 20px;
-        background: linear-gradient(90deg, #ff475f, #fde163);
-        width: 0%; }
-  .main .percentage {
-    font-family: "Bitter", serif; }
-
-.aside {
-  overflow: scroll; }
-  .aside__card--event {
-    background-color: #39bef6;
-    min-width: 300px;
-    max-width: 300px; }
-  .aside__card--favorite {
-    background-color: #45e492;
-    min-width: 300px;
-    max-width: 300px; }
-  .aside__card--message {
-    background-color: #ff445f;
-    min-width: 300px;
-    max-width: 300px; }
-
-@media screen and (min-width: 768px) {
-  .graphs {
-    display: flex;
-    justify-content: center; }
-    .graphs .content__card {
-      margin-right: 5px; }
-      .graphs .content__card--main {
-        margin-top: 50px; }
-    .graphs .donut {
-      margin-left: 5px; } }
-
-@media (min-width: 900px) {
-  .aside {
-    justify-content: center; } }
+@media (min-width: 768px) {
+  .donut {
+    margin-left: 5px; } }
 
 @media (min-width: 992px) {
-  .graphs {
-    flex-direction: column; }
-    .graphs .content__card {
-      margin: 0;
-      max-height: 200px; }
-      .graphs .content__card--main {
-        margin-top: 0px; }
-    .graphs .donut {
-      margin: 10px 0 0 0; }
-  .mainContent {
-    display: flex; } }
+  .donut {
+    margin: 10px 0 0 0; } }
 
-@media (min-width: 1200px) {
-  .global {
+.content__card {
+  margin: 30px 5px; }
+  .content__card--main {
+    height: 100px;
     display: flex;
-    flex-direction: row-reverse;
-    height: 100%; }
-    .global .aside {
-      flex-direction: column;
-      overflow: unset;
-      justify-content: start;
-      padding-top: 20px; }
-    .global .mainContent .graphs {
-      margin-right: 10px; }
-    .global .mainContent .slider {
-      margin-left: 10px; } }
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .content__card--main .percentage {
+      font-family: "Bitter", serif;
+      font-size: 2.5rem;
+      color: black; }
+  .content__card #progress {
+    width: 80%;
+    background-color: #ddd;
+    border-radius: 50px; }
+    .content__card #progress #bar {
+      height: 20px;
+      background: linear-gradient(90deg, #ff475f, #fde163);
+      width: 0%; }
+
+@media (min-width: 768px) {
+  .content__card {
+    margin-right: 5px; }
+    .content__card--main {
+      margin-top: 50px; } }
+
+@media (min-width: 992px) {
+  .content__card {
+    margin: 0;
+    max-height: 200px; }
+    .content__card--main {
+      margin-top: 0px; } }
 
 *::-webkit-scrollbar {
   width: 0; }
@@ -7383,7 +7343,7 @@ li {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #333;
+  background-color: #ffffff;
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
@@ -7400,6 +7360,50 @@ li {
     background-image: url("https://picsum.photos/463/501"); }
   .img3 {
     background-image: url("https://picsum.photos/463/502"); } }
+
+.main {
+  background-color: #ffffff; }
+
+.aside {
+  overflow: scroll; }
+  .aside__card--event {
+    background-color: #39bef6;
+    min-width: 300px;
+    max-width: 300px; }
+  .aside__card--favorite {
+    background-color: #45e492;
+    min-width: 300px;
+    max-width: 300px; }
+  .aside__card--message {
+    background-color: #ff445f;
+    min-width: 300px;
+    max-width: 300px; }
+
+@media (min-width: 768px) {
+  .graphs {
+    display: flex;
+    justify-content: center; } }
+
+@media (min-width: 992px) {
+  .graphs {
+    flex-direction: column; }
+  .aside {
+    justify-content: center; }
+  .mainContent {
+    display: flex; } }
+
+@media (min-width: 1200px) {
+  .global {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%; }
+    .global .aside {
+      flex-direction: column;
+      overflow: unset;
+      justify-content: start;
+      padding-top: 20px; }
+    .global .mainContent .graphs {
+      margin-right: 10px; } }
 
 .footer {
   background-color: #f5f6fa; }

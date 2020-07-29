@@ -9,7 +9,6 @@ const myInterval = setInterval(() => {
   if (i === 76) {
     clearInterval(myInterval);
   }
-  // console.log(progress.style.width);
 }, 10);
 
 // Donut
@@ -37,12 +36,16 @@ function progressDonutAnim(percent, interval) {
 }
 
 //  Menu
-let menu = document.getElementById("menu");
+let closeBtn = document.getElementById("menu");
+let openBtn = document.getElementById("menuBtn");
 
-const showMenu = () => {
-  menu.style.display = "flex";
-};
+openBtn.addEventListener("click", () => {
+  console.log("coucou");
+  closeBtn.style.display = "flex";
+  openBtn.style.display = "none";
+});
 
-const closeMenu = () => {
-  menu.style.display = "none";
-};
+closeBtn.addEventListener("click", () => {
+  openBtn.style.display = "block";
+  closeBtn.style.display = "none";
+});
