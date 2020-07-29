@@ -7195,12 +7195,16 @@ a.text-dark:hover, a.text-dark:focus {
       margin-left: 10%;
       font-family: "Bitter", serif;
       font-style: italic; }
-      .header .menu .nav ul {
-        list-style: none; }
+      .header .menu .nav .menuLink {
+        text-decoration: none; }
       .header .menu .nav__links {
-        font-size: x-large; }
+        font-size: x-large;
+        text-decoration: none;
+        color: white; }
         .header .menu .nav__links--sublinks {
-          font-size: medium; }
+          font-size: medium;
+          text-decoration: none;
+          color: white; }
 
 @media (min-width: 992px) {
   .header .menu .nav {
@@ -7270,6 +7274,8 @@ a.text-dark:hover, a.text-dark:focus {
     display: flex; }
     .graphs .content__card {
       margin-right: 5px; }
+      .graphs .content__card--main {
+        margin-top: 50px; }
     .graphs .donut {
       margin-left: 5px; } }
 
@@ -7283,6 +7289,8 @@ a.text-dark:hover, a.text-dark:focus {
     .graphs .content__card {
       margin: 0;
       max-height: 200px; }
+      .graphs .content__card--main {
+        margin-top: 0px; }
     .graphs .donut {
       margin: 10px 0 0 0; }
   .mainContent {

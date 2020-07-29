@@ -45,16 +45,21 @@
       margin-left: 10%;
       font-family: "Bitter", serif;
       font-style: italic;
-
-      ul {
-        list-style: none;
+      
+      .menuLink {
+        text-decoration: none;
       }
+
 
       &__links {
         font-size: x-large;
+        text-decoration: none;
+        color: white;
 
         &--sublinks {
           font-size: medium;
+          text-decoration: none;
+          color: white;
         }
       }
     }

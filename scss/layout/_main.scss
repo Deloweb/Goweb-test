@@ -60,6 +60,10 @@
 
     .content__card {
       margin-right: 5px;
+
+      &--main {
+        margin-top: 50px;
+      }
     }
 
     .donut {
@@ -81,6 +85,10 @@
     .content__card {
       margin: 0;
       max-height: 200px;
+
+      &--main {
+        margin-top: 0px;
+      }
     }
 
     .donut {
@@ -103,17 +111,16 @@
       flex-direction: column;
       overflow: unset;
       justify-content: start;
-      padding-top: 20px
+      padding-top: 20px;
     }
 
-    .mainContent{
-
-      .graphs{
+    .mainContent {
+      .graphs {
         margin-right: 10px;
       }
 
       .slider {
-        margin-left: 10px
+        margin-left: 10px;
       }
     }
   }

@@ -62,19 +62,15 @@
 
         <!-- Hamb menu -->
         <nav class="nav">
-          <ul class="pl-4 nav__links">
-            <li class="text-white pb-3">
-              One link
-              <ul class="grey pl-0 nav__links--sublinks">
-                <li class="pt-1 pb-1">Link lorem 1</li>
-                <li class="pt-1 pb-1">Link ipsum 2</li>
-              </ul>
-            </li>
-            <li class="text-white pb-3">
-              Two links
-            </li>
-            <li class="text-white">Three links</li>
-          </ul>
+          <div class="pl-4 nav__links d-flex flex-column">
+              <a href="#1" class="menuLink text-white">One link</a>
+              <div class="nav__links--sublinks d-flex flex-column pb-3">
+                <a href="#a" class="menuLink pt-1 pb-1 grey">Link lorem 1</a>
+                <a href="#b" class="menuLink pt-1 pb-1 grey">Link ipsum 2</a>
+              </div>
+            <a href="#2" class="menuLink text-white pb-3">Two links</a>
+            <a href="#3" class="menuLink text-white">Three links</a>
+            </div>
         </nav>
       </div>
     </header>
